@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "webapp/base.html" %}
+{% load staticfiles %}
+
+      {% block body_block %}
+        <div class="container" style="text-align:center; margin-top:50px;">
+          <h1>ขอบคุณครับ</h1><br>
+          <h1>ขณะนี้ท่านได้ลงทะเบียนเสร็จเรียบร้อยแล้ว</h1><br>
+          <h3>เจ้าหน้าที่จะทำการตรวจสอบและยืนยันการลงทะเบียนของท่านภายใน 3 วันทำการ</h3><br>
+          <h3>ท่านสามารถใช้เบอร์โทรศัพท์มือถือตรวจสอบผลการลงทะเบียนได้</h3><br>
+          <p><a class="btn btn-primary" href="{% url 'home' %}" role="button">กลับหน้าหลัก</a></p>
+        </div>
+      {% endblock %}

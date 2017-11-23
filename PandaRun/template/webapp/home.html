@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "webapp/base.html" %}
+{% load staticfiles %}
+
+      {% block body_block %}
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static "css/home.css"%}">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <p><a class="btn btn-primary btn-lg" href="{% url 'regis_info' %}" role="button">สมัครเลย!</a></p>
+          </div>
+        </div>
+
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>เส้นทางการวิ่ง</h2>
+            <p>เมื่อคิดถึงเขา อยากเจอเขา เราจึงวิ่งไปหาเขา! เส้นทางการวิ่งทั้ง 21 กิโลเมตร และ 10 กิโลเมตร ตลอดสองข้างทางจะพบกับธรรมชาติที่อุดมสมบูรณ์อากาศที่บริสุทธิ์และเย็นสบาย และแน่นอนเจอเขาแน่นอน </p>
+            <p><a class="btn btn-primary" href="{% url 'course' %}" role="button">รายละเอียด &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>เสื้อและเหรียญรางวัล</h2>
+            <p>นักวิ่งที่มาร่วมวิ่งกับเราจะได้เสื้อแพนด้าตาบวมและเมื่อวิ่งเข้าเส้นชันก็จะได้รับเหรียญรางวัล</p>
+            <p><a class="btn btn-primary" href="{% url 'reward' %}" role="button">รายละเอียด &raquo;</a></p>
+         </div>
+          <div class="col-lg-4">
+            <h2>กำหนดการ</h2>
+            <p>เจอกัน!</p>
+            <p>วันเสาร์ที่ 20 มกราคม 2561 รับเสื้อ+BIB</p>
+            <p>วันอาทิตย์ที่ 21 มกราคม 2561 ปล่อยตัว 05:30 น.</p>
+            <p><a class="btn btn-primary" href="{% url 'schedule' %}" role="button">รายละเอียด &raquo;</a></p>
+          </div>
+        </div>
+      {% endblock %}

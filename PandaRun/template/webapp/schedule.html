@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "webapp/base.html" %}
+{% load staticfiles %}
+
+      {% block body_block %}
+        <div class="container" style="padding-top:50px;">
+          <div class="container" style="text-align:center;">
+            <p style="text-align: left;">แผนที่ <a href="https://www.google.co.th/maps/place/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%88%E0%B8%B1%E0%B8%A2%E0%B8%9B%E0%B8%B2%E0%B8%81%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87/@14.6807345,101.4078346,17z/data=!4m12!1m6!3m5!1s0x311c2bbfeb0e43d3:0x5b7a465b467885a8!2z4Liq4LiW4Liy4LiZ4Li14Lin4Li04LiI4Lix4Lii4Lib4Liy4LiB4LiK4LmI4Lit4LiH!8m2!3d14.6807293!4d101.4100233!3m4!1s0x311c2bbfeb0e43d3:0x5b7a465b467885a8!8m2!3d14.6807293!4d101.4100233?hl=en">สถานีวิจัยมหาวิทยาลัยเกษตรฯ</a></p>
+            <img class="img-responsive" style="margin-top:20px; margin-bottom:20px;" src="{% static "images/schedule.png"%}" alt="Detail1 image is not found">
+          </div>
+        </div>
+      {% endblock %}

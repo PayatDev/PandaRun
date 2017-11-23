@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ลงทะเบียนนักวิ่ง แพนด้าตาบวมรัน</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css/register.css"%}">
+  </head>
+  <body>
+    <div class="container" style="text-align:center; margin-top:150px; margin-bottom:50px;">
+      <h3>ลงทะเบียนนักวิ่งระยะ 10 km</h3><br>
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6" style="text-align:left;">
+          <form method="post" enctype="multipart/form-data">
+            {{ form|crispy }}
+            {% csrf_token %}
+            <div style="text-align:center; margin-top:20px;">
+              <input type="submit" class="btn btn-primary" value="ลงทะเบียน">
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

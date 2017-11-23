@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>คิดถึงเขา....เราจึงมาวิ่ง แพนด้าตาบวมรัน 2018</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "css/main.css"%}">
+
+  </head>
+  <body>
+    <div class="container">
+      <header class="masthead">
+        <h3 class="text-muted">Panda Run 2018</h3>
+      </header>
+
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="https://www.facebook.com/moaningpanda/">เพจแพนด้าตาบวม</a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">หน้าหลัก<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'check' %}">ผลการลงทะเบียน</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'result' %}">ผลการแข่งขัน</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'gallery' %}">รูปภาพ</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'FQA' %}">คำถามที่พบบ่อย</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'contact' %}">ติดต่อเรา</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {% block body_block %}
+
+      {% endblock %}
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Panda Run 2018</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    </div>
+
+  </body>
+</html>

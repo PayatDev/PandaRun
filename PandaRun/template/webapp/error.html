@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "webapp/base.html" %}
+{% load staticfiles %}
+
+      {% block body_block %}
+        <div class="container" style="text-align:center; margin-top:50px;">
+          <h1>การลงทะเบียนผิดพลาด กรุณาลงทะเบียนใหม่อีกครั้ง</h1><br><br>
+          <p><a class="btn btn-primary" href="{% url 'home' %}" role="button">กลับหน้าหลัก</a></p>
+        </div>
+      {% endblock %}

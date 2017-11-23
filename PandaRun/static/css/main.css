@@ -1,0 +1,17 @@
+body{
+  font-family: 'Prompt', sans-serif;
+}
+
+header{
+  padding-top: 10px;
+}
+
+.container #Q{
+  font-size: 1.5em;
+  color: #FF8106;
+}
+
+.container #A{
+  font-size: 1.5em;
+  color: #003366;
+}

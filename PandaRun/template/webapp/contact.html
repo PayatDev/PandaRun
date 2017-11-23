@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "webapp/base.html" %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+      {% block body_block %}
+        <div class="container" style="margin-top:50px; margin-bottom:50px;">
+          <div class="row">
+            <div class="col-lg-7">
+              <p style="font-size:1.5em;">ติดต่อเรา</p>
+              <div style="text-align:left;">
+                <form method="post">
+                  {{ form|crispy }}
+                  {% csrf_token %}
+                  <div style="text-align:center;"><input type="submit" class="btn btn-primary" value="ส่งข้อความ"></div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-5"></div>
+          </div>
+        </div>
+      {% endblock %}

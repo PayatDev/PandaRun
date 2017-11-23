@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "webapp/base.html" %}
+{% load staticfiles %}
+
+      {% block body_block %}
+        <div class="container" style="text-align:center; margin-top:50px;">
+          <!-- Search form -->
+          <div style="margin-bottom:50px">
+            <h2>ตรวจสอบสถานะการลงทะเบียน</h2>
+            <form method="POST" style="margin-top:50px;">
+              {% csrf_token %}
+              <label style="font-size:1.5em;" for="">กรุณากรอกหมายเลขโทรศัพท์มือถือ</label><br><br>
+              <input type="text" name="your_number" value=""><br><br>
+              <input type="submit" class="btn btn-primary" style="text-align:center" value="ตรวจสอบ"><br>
+            </form>
+          </div>
+
+          <!-- Display search -->
+          {% if checking21 or checking10 %}
+            <table class="table table-bordered">
+              <thead>
+                <th>ชื่อ</th>
+                <th>สกุล</th>
+                <th>ขนาดเสื้อ</th>
+                <th>ระยะ</th>
+                <th>สถานะ</th>
+              </thead>
+              <tbody style="text-align:left">
+                  {% for check in checking21 %}
+                  <tr>
+                    <td>{{ check.first_name }}</td>
+                    <td>{{ check.last_name }}</td>
+                    <td>{{ check.shirt_size }}</td>
+                    <td>21 km</td>
+                    <td>{{ check.status }}</td>
+                  </tr>
+                  {% endfor %}
+                  {% for check in checking10 %}
+                  <tr>
+                    <td>{{ check.first_name }}</td>
+                    <td>{{ check.last_name }}</td>
+                    <td>{{ check.shirt_size }}</td>
+                    <td>10 km</td>
+                    <td>{{ check.status }}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table><br>
+            <p style="font-size:1.5em;">ท่านสามารถพิมพ์หน้านี้เก็บไว้เป็นหลักฐานได้</p><br>
+          {% else %}
+            <p style="font-size:1.5em;">กรุณาตรวจสอบหมายเลขโทรศัพท์มือถือให้ถูกต้อง</p><br>
+          {% endif %}
+        </div>
+
+      {% endblock %}

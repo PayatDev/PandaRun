@@ -1,0 +1,14 @@
+.jumbotron{
+  margin-top: 20px;
+  text-align: right;
+  background-image:url("../images/cover.png");
+  background-size: cover;
+  height: 580px;
+  margin-bottom: 20px;
+}
+
+.jumbotron .btn{
+  margin-top: 400px;
+  margin-right: 830px;
+  padding: 25px 25px 25px 25px;
+}
